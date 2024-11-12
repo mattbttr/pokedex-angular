@@ -1,13 +1,14 @@
 import { Component, Directive, OnInit} from '@angular/core';
 import { POKEMONS } from './mock-pokemon-list';
 import { Pokemon } from './pokemon';
-import { NgFor, NgIf } from '@angular/common';
+import { CommonModule, DatePipe, NgFor, NgIf, UpperCasePipe } from '@angular/common';
 import { BorderCardDirective} from './border-card.directive';
+import { PokemonTypeColorPipe } from './pokemon-type-color.pipe';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [NgIf, NgFor, BorderCardDirective],
+  imports: [NgIf, NgFor, BorderCardDirective, CommonModule, PokemonTypeColorPipe],
   templateUrl: 'app.component.html'
 })
 export class AppComponent implements OnInit{

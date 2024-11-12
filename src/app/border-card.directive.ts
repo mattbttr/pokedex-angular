@@ -15,7 +15,7 @@ export class BorderCardDirective {
     this.setBorder(this.initialColor);
   }
 
-  @Input('pkmnBorderCard') borderColor : string;
+  @Input('pkmnBorderCard') borderColor: string;
 
   @HostListener('mouseenter') onMouseEnter(){
     this.setBorder(this.borderColor || this.defaultColor);
@@ -25,7 +25,7 @@ export class BorderCardDirective {
     this.setBorder(this.initialColor);
   }
 
-  setHeight(height : number | string){
+  setHeight(height : number){
     this.el.nativeElement.style.height = `${height}px`;
   }
 
